@@ -7,6 +7,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     HttpClientModule,
+    MatIconModule,
     BrowserModule,
     TranslateModule.forRoot({
       loader: {
@@ -23,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
         deps: [HttpClient]
       }
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
